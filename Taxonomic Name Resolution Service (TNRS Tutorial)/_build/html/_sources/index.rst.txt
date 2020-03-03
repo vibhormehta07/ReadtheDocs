@@ -1,0 +1,163 @@
+.. include:: cyverse_rst_defined_substitutions.txt
+
+|CyVerse logo|_
+
+|Home_Icon|_
+`Learning Center Home <http://learning.cyverse.org/>`_
+
+**Taxonomic Name Resolution Service (TNRS Tutorial)**
+=====================================================
+
+Goal
+----
+The goal of this tutorial is to become familiar with the Taxonomic Name Resolution Service (TNRS) to identify, correct and update scientific names of plants. TNRS can process many names at once, saving hours of tedious and error-prone manual name correction.
+
+The TNRS tutorial will take users through the following steps:
+
+- Compile and submit a list of names
+- Process names
+- Download and examine results
+
+Rationale and Background
+------------------------
+TNRS validates names, corrects spelling errors, indicates alternative spellings, and replaces out-of-date names by using an authoritative database of currently accepted, published scientific names.
+
+Common problems with taxonomic standardization include:
+
+Synonymous Names - Many organisms go by multiple names.
+
+Erroneous Names - Spelling errors in database entries and other issues lead to mismatched results.
+
+Outdated Names - Taxonomic names can change or be re-grouped. Taxonomists often disagree with regard to which names should be grouped together.
+
+Large, collaborative databases such as GBIF, SpeciesLink, VegBank, SALVIAS, TraitNet, and GenBank are plagued by taxonomic problems, with up to 30% of names unmatched to any published name. Even among published names, 5% to 20% are synonymous. Taxonomic standardization remains an error-prone and largely manual process. The need for an automated name resolution service has never been greater.
+
+Additional Resources
+--------------------
+Visit this page for a more detailed overview.
+
+Prerequisites
+-------------
+None. However, please register for an iPlant account at user.iplantcollaborative.org to receive information about changes and updates.
+
+Test Data
+---------
+Sample data can be found on this page. Be sure to be logged into your iPlant account.
+
+Results
+-------
+View of results window:
+|Results|
+Workflow
+--------
+Section 1: Submitting a list
+Overview: There are two ways of submitting a list: entering it manually or uploading it.
+
+Entering a list:
+
+  1.Go to the TNRS app page.
+  2.Click "Enter List" tab.
+  3.Up to 5000 names can be entered in the Enter List tab, one name per line regardless of file extension. Names can be typed in manual or copy and pasted from a text editor.
+  4.Click Submit List to enter list or Clear to start over. Results will appear in a table below the tabbed input box.
+
+Uploading a list:
+
+  1.Go to the TNRS app page.
+  2.Click "Upload and Submit List" tab.
+  3.List file MUST be plain text, with one name per line, and must have a .txt filename extension; word processor, or spreadsheet files are NOT supported.
+  4.Enter an email address. When the list is processed you will receive an email notification that will include a Submission Key to be used to retrieve your results from the "Retrieve Results" tab.
+  5.Click Submit List to enter list or Clear to start over.
+  6.Enter your email and Submission Key in the "Retrieve Results" tab. Click Retrieve. Results will appear in a table immediately below.
+  7.The time required to process a list depends on the number of names submitted and the number that go through the fuzzy matching step, which is the slowest step. Recent benchmarking using a list of 344,145 names showed a processing rate of 1.23 names/sec (total time of 77:55:02). Future development effort will be devoted to improving the performance time.
+
+Section 2: Processing the results
+Overview: Once your list has been processed, a new window should appear below the application screen.
+
+  1.All names in the “Name Matched” and “Accepted Name” fields are linked to the record in the taxonomic source(s).
+  2.The “Details” link displays information about the match score.
+  3.If a submitted name matches more than one name, that is indicated in the “Name Matched” field in parentheses, (+X more).
+    - You may select an alternative match if you follow the “(+X more)” link. A popup list will appear. Select a preferred term and click Apply to choose that match.
+    - If the TNRS application found multiple equally good matches and cannot select a single best match or if there were issues with the results that require inspection by the user, a red warning flag will appear next to the result. For details on warning flags see this page.
+    - It is recommended that users examine any result with an Overall Score lower than 100% or more than one Name Matched.
+  4.The "Taxonomic Status" field tells you whether the matched name is also the accepted name (Accepted) or a synonym of a different accepted name (Synonym). In some cases, there may be insufficient information to determine the status of the name, or the Computed Acceptance algorithm is unable to choose a single best name from among alternative conflicting accepted names (No opinion).
+  5.When you have finished examining the results, download them by clicking Download results located at the top left corner of the results window. Downloaded results are in .csv format and can be opened in any spreadsheet.
+  6.Results are stored on the iPlant server for only 7 days.
+  7.For further elaboration on the results window, go to rs.iplantcollaborative.org/instructions.html#viewing_results .
+
+Section 3: Downloading results
+Overview: After clicking Download results, you will have the option to download in a Simple or Detailed format.
+
+Simple Download
+
+The Simple Download contains the general information displayed on the results screen.
+
+Detailed Download
+
+The Detailed Download contains detailed information of results and specifications of how the names are parsed and matched. It includes the fields found in Simple Download as well as additional fields.
+
+Additional information, help
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..
+    Short description and links to any reading materials
+
+Search for an answer:
+|CyVerse Learning Center| or
+|CyVerse Wiki|
+
+Post your question to the user forum:
+|Ask CyVerse|
+
+----
+
+**Fix or improve this documentation**
+
+- On Github: |Github Repo Link|
+- Send feedback: `Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
+
+----
+
+|Home_Icon|_
+`Learning Center Home <http://learning.cyverse.org/>`__
+
+.. Comment: Place Images Below This Line
+   use :width: to give a desired width for your image
+   use :height: to give a desired height for your image
+   replace the image name/location and URL if hyperlinked
+
+
+ .. |Clickable hyperlinked image| image:: ./img/IMAGENAME.png
+    :width: 500
+    :height: 100
+ .. _CyVerse logo: http://learning.cyverse.org/
+
+ .. |Static image| image:: ./img/IMAGENAME.png
+    :width: 25
+    :height: 25
+
+.. |De app| image:: ./img/apps.png
+
+.. |Results| image:: ./img/Results.png
+
+
+
+
+.. Comment: Place URLS Below This Line
+
+   # Use this example to ensure that links open in new tabs, avoiding
+   # forcing users to leave the document, and making it easy to update links
+   # In a single place in this document
+
+   .. |Substitution| raw:: html # Place this anywhere in the text you want a hyperlink
+
+      <a href="REPLACE_THIS_WITH_URL" target="blank">Replace_with_text</a>
+
+
+.. |Github Repo Link|  raw:: html
+
+   <a href="FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX" target="blank">Github Repo Link</a>
+
+
+.. |Download Cyberduck| raw:: html
+
+   <a href="https://cyberduck.io/" target="blank">Download Cyberduck</a>

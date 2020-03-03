@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MAKER Genome Annotation using cc-tools and Jetstream(WQ-MAKER) &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/cyverse.js"></script>
+        <script src="_static/intercom-script-for-learning.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/cyverse.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> YOUR QUICKSTART NAME HERE as topic_quick_start
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#"><strong>MAKER Genome Annotation using cc-tools and Jetstream(WQ-MAKER)</strong></a><ul>
+<li><a class="reference internal" href="#rationale-and-background">Rationale and background:</a></li>
+<li><a class="reference internal" href="#considerations">Considerations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#note-advanced-users"><strong>Note(Advanced Users)</strong></a></li>
+<li><a class="reference internal" href="#moving-data-from-cyverse-datastore-using-icommands"><strong>Moving data from CyVerse Datastore using iCommands</strong></a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">YOUR QUICKSTART NAME HERE as topic_quick_start</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li><strong>MAKER Genome Annotation using cc-tools and Jetstream(WQ-MAKER)</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse logo" src="_images/cyverse_rgb.png" style="width: 500px; height: 100px;" /></a></p>
+<p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
+<a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
+<div class="section" id="maker-genome-annotation-using-cc-tools-and-jetstream-wq-maker">
+<h1><strong>MAKER Genome Annotation using cc-tools and Jetstream(WQ-MAKER)</strong><a class="headerlink" href="#maker-genome-annotation-using-cc-tools-and-jetstream-wq-maker" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rationale-and-background">
+<h2>Rationale and background:<a class="headerlink" href="#rationale-and-background" title="Permalink to this headline">¶</a></h2>
+<p>MAKER is a flexible and scalable genome annotation pipeline that automates the many steps necessary for the detection of protein coding genes (Campbell et al. 2013). MAKER identifies repeats, aligns ESTs and proteins to a genome, produces ab initio gene predictions, and automatically synthesizes these data into gene annotations having evidence-based quality indices.  MAKER was developed by the Yandell Lab and is described in several publications (Cantarel et al. 2008; Holt &amp; Yandell 2011).  Additional background is available at the MAKER Tutorial at GMOD and is highly recommended reading.</p>
+<p>MAKER with CCTools (aka WQ-MAKER) is a modified MAKER annotation tools capable of running MAKER on distributed computing resources such as Jetstream cloud (Thrasher et al., 2012). Using the work-queue platform, users can now run MAKER across multiple virtual machines to achieve a several fold reduction in the duration of the MAKER run.</p>
+<p>This tutorial will take users through steps of:</p>
+<ol class="arabic simple">
+<li><p>Running WQ-MAKER on Jetstream cloud</p></li>
+<li><p>Running WQ-MAKER on an example genome assembly data</p></li>
+</ol>
+</div>
+<div class="section" id="considerations">
+<h2>Considerations<a class="headerlink" href="#considerations" title="Permalink to this headline">¶</a></h2>
+<p><strong>Sounds great, what do I need to get started?</strong></p>
+<ol class="arabic simple">
+<li><p>Jetstream allocation. If you don’t have one, you can send in your request to add you to CyVerse’s JS allocation through the intercom (button on the bottom right on this page).</p></li>
+<li><p>XSEDE account</p></li>
+<li><p>Your data (or you can run example data)</p></li>
+</ol>
+<p><strong>What kind of data do I need?</strong></p>
+<ol class="arabic simple">
+<li><p>Mandatory Requirements</p></li>
+</ol>
+<blockquote>
+<div><p>1.1 Genome assembly(fasta file)</p>
+<p>1.2 Organism Type</p>
+<blockquote>
+<div><p>1.2.1 Eukaryotic(default, set as: organism_type=eukaryotic)
+1.2.2 Prokaryotic(default, set as: organism_type=prokaryotic)</p>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Additional data that can be used to improve the annotation (Highly recommended)</p></li>
+</ol>
+<blockquote>
+<div><dl class="simple">
+<dt>2.1 RNA evidence (at least one of them is needed)</dt><dd><p>2.1.1 Assembled mRNA-seq transcriptome (fasta file)
+2.1.2 Expressed sequence tags (ESTs) data (fasta file)
+2.1.3 Aligned EST or transcriptome GFF3 from your organism
+2.1.4 Aligned EST or transcriptome GFF3 from a closely related organism</p>
+</dd>
+<dt>2.2 Protein evidence</dt><dd><p>2.2.1 protein sequence file in fasta format (i.e. from multiple organisms)
+2.2.2 protein gff (aligned protein homology evidence from an external GFF3 file)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>What kind of resources will I need for my project?</strong></p>
+<ol class="arabic simple">
+<li><p>Enough storage space on the WQ-MAKER Jetstream instance for both input and output files</p></li>
+</ol>
+<blockquote>
+<div><p>1.1 Creating and mounting an external volume to the running WQ-MAKER MASTER instance would be recommended</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>One Master and several workers needed for running your computation</p></li>
+</ol>
+<blockquote>
+<div><p>2.1 Benchmarking results for data sets can help you estimate the number of workers need for running your annotation</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Enough AUs to run your computation</p></li>
+</ol>
+<p><strong>Part 1: Connect to an instance of an WQ-MAKER Jetstream Image (virtual machine)</strong></p>
+<p>Step 1: Go to <a class="reference external" href="https://use.jetstream-cloud.org/application">https://use.jetstream-cloud.org/application</a> and log in with your XSEDE credentials.</p>
+<p><img alt="WQ-Maker1" src="_images/WQ-Maker1.png" /></p>
+<p><img alt="WQ-Maker2" src="_images/WQ-Maker2.png" /></p>
+<p><img alt="WQ-Maker3" src="_images/WQ-Maker3.png" /></p>
+<p>Step 2: Click on the “Create New Project”  in the Project tab on the top and enter the name of the project and a brief description</p>
+<p><img alt="WQ-Maker4" src="_images/WQ-Maker4.png" /></p>
+<p><img alt="WQ-Maker5" src="_images/WQ-Maker5.png" /></p>
+<p>Step 3:  Launch an instance from the selected image and name it as MASTER</p>
+<p>After the project has been created and entered inside it, click the “New” button, select “MAKER 2.31.9 with CCTools” image and then click Launch instance. In the next window (Basic Info),</p>
+<p><img alt="WQ-Maker6" src="_images/WQ-Maker6.png" /></p>
+<blockquote>
+<div><p>3.1 name the instance as “MASTER” (don’t worry if you forgot to name the instance at that point, as you can always modify the name of the instance later)
+3.2 set base image version as “2.0” (default)
+3.3 leave the project as it is or change to a different project if needed
+3.4 select “Jetstream - Indiana University or Jetstream - TACC” as Provider and click ‘Continue’. Your choice of provider will depend on the resources you have available (AUs) and the needs of your instance
+3.5 select “m1.medium” as Instance size (this is the minimum size that is required by WQ-MAKER image) and click “Continue”.</p>
+</div></blockquote>
+<p><img alt="WQ-Maker7" src="_images/WQ-Maker7.png" /></p>
+<p>Step 4: As the instance is launched behind the scenes, you will get an update as it goes through each step.</p>
+<p>Status updates of Instance launch (both MASTER and WORKER) include Build-requesting launch, Build-networking, Build-spawning, Active-networking, Active-deploying. Depending on the usage load on Jetstream, it can take anywhere from 2-5 mins for an instance to become active. You can force check updates by using the refresh button in the Instance launch page or the refresh button on your browser. Once the instance becomes active a virtual machine with the ip address provided will become available for you to connect to. This virtual machine will have all the necessary components to run WQ-MAKER and test files to run a MAKER demo.</p>
+<p><img alt="WQ-Maker8" src="_images/WQ-Maker8.png" /></p>
+<p>Step 5: Create a volume</p>
+<p>Since the m1 medium instance size (60GB disk space) selected for running MASTER instance of WQ-MAKER may not be sufficient for most of the MAKER runs, it is recommended to run it on volumes</p>
+<p>5.1 Click the “New” button in the project and select “Create Volume”. Enter the name of the volume, volume size (GB) needed and the provider (TACC or Indiana) and finally click “Create Volume”</p>
+<p><img alt="WQ-Maker9" src="_images/WQ-Maker9.png" /></p>
+<p>Attach the created volume to the MASTER Instance</p>
+<p><img alt="WQ-Maker10" src="_images/WQ-Maker10.png" /></p>
+<p>5.2 Click on the MASTER instance now</p>
+<p><img alt="WQ-Maker11" src="_images/WQ-Maker11.png" /></p>
+<p>Jetstream provides web-shell, a web based terminal, for accessing your VM at the command line level once its been deloyed.</p>
+<p><img alt="WQ-Maker12" src="_images/WQ-Maker12.png" /></p>
+<p>However, you might find that you wish to access your VM via SSH if you’ve provisioned it with a routable IP number. For SSH access, you can create (or copy) SSH public-keys for your non-Jetstream computer that will allow it to access Jetstream then deposit those keys in your Atmosphere settings. More instructions can be found here</p>
+<p>Step 6: Add public SSH key of MASTER to Jetstream</p>
+<p>If you do not already have a ~/.ssh/id_rsa.pub file, then run this command to create it. Use all the defaults..</p>
+<p>Copy the public SSH key from your id_rsa.pub file and paste it to the <a class="reference external" href="https://use.jetstream-cloud.org/application/settings">https://use.jetstream-cloud.org/application/settings</a>, give a name (MASTER) to it and click confirm.</p>
+<p><img alt="WQ-Maker13" src="_images/WQ-Maker13.png" /></p>
+<p>Step 7: Launch WORKER instances from MAKER 2.31.9 with CCTools image</p>
+<p>Launch one to several instances from the MAKER 2.31.9 with CCTools image and name them as WORKER-1, WORKER-2 etc.,</p>
+<p><img alt="WQ-Maker14" src="_images/WQ-Maker14.png" /></p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Part 3: Set up a MAKER run using the Terminal window. Instead IF you want to run the WQ-MAKER using Jupyter notebook please see the section below **</p>
+<p>Step 1:  Navigate to the mounted volume.</p>
+<p>Once you have logged in to your instance using webshell or ssh of your MASTER instance, you must change the directory permissions as below</p>
+<p>Step 2: Get oriented. You will find staged example data in “/opt/WQ-MAKER_example_data/” within the MASTER instance.  List its contents with the ls command:</p>
+<p>2.1 maker_*.ctl file are a set of configuration files that can be used for this exercise or generated as described below.
+2.2 worker-launch.yml and maker-hosts are ansible-playbook and host file for luanching jobs on WORKERS (optional for WQ-MAKER)
+2.3 fasta files include a scaled-down genome (test_genome.fasta) which is comprised of the first 300kb of 12 chromosomes of rice and scaled-down genome (test_genome_chr1.fasta) which is comprised of the first 300kb of first chromosome of rice
+2.4 mRNA sequences from NCBI (mRNA.fasta)
+2.5 publicly available annotated protein sequences of rice (MSU7.0 and IRGSP1.0) - msu-irgsp-proteins.fasta
+2.6 collection of plant repeats (plant_repeats.fasta)
+2.7ribosomal RNAsequence of rice (Os-rRNA.fa)</p>
+<p>Executables for running MAKER are located in /opt/maker/bin and /opt/maker/exe:</p>
+<p>As the names suggest the “/opt/maker/bin” directory includes many useful auxiliary scripts.  For example cufflinks2gff3 will convert output from an RNA-seq analysis into a GFF3 file that can be used for input as evidence for WQ-MAKER. RepeatMasker, augustus, blast, exonerate, and snap are programs that MAKER uses in its pipeline.  We recommend reading MAKER Tutorial at GMOD for more information about these.</p>
+<p>Step 3: Set up a WQ-MAKER run.  Create a working directory called “maker_run” on your home directory using the mkdir command and use cd to move into that directory:</p>
+<p>Step 4: Copy the contents of  “WQ-MAKER_example_data” into the current directory using cp -r command.  Verify using the ls command.  Change the permissions on that directory</p>
+<p>Step 5: Run the maker command with the –help flag to get a usage statement and list of options:</p>
+<dl class="simple">
+<dt>Step 6: Create control files that tell MAKER what to do. Three files are required:</dt><dd><p>6.1 maker_opts.ctl - gives location of input files (genome and evidence) and sets options that affect MAKER behavior
+6.2 maker_exe.ctl - gives path information for the underlying executables.
+6.3 maker_bopt.ctl - sets parameters for filtering BLAST and Exonerate alignment results</p>
+</dd>
+</dl>
+<p>To create these files run the maker command with the -CTL flag. Verify with ls:</p>
+<p>Otherwise open the maker_opts.ctl in a text editor of choice )</p>
+<p>Here are the sections of the “maker_opts.ctl” file you need to edit.  For more information about the this please check this The_MAKER_control_files_explained - Add path information to files as shown.</p>
+<p>This section pertains to specifying the genome assembly to be annotated and setting organism type:</p>
+<p>The following section pertains to EST and other mRNA expression evidence.  Here we are only using same species data, but one could specify data from a related species using the “altest” parameter. With RNA-seq data aligned to your genome by Cufflinks or Tophat one could use maker auxiliary scripts (cufflinks2gff3 and tophat2gff3) to generate GFF3 files and specify these using the est_gff parameter:</p>
+<dl class="simple">
+<dt>..code-block:: bash</dt><dd><p>#—–EST Evidence (for best results provide a file for at least one)
+est=./test_data/mRNA.fasta #set of ESTs or assembled mRNA-seq in fasta format
+altest= #EST/cDNA sequence file in fasta format from an alternate organism
+est_gff= #aligned ESTs or mRNA-seq from an external GFF3 file
+altest_gff= #aligned ESTs from a closely relate species in GFF3 format</p>
+</dd>
+</dl>
+<p>The following section pertains to protein sequence evidence.  Here we are using previously annotated protein sequences.  Another option would be to use SwissProt or other database:</p>
+<p>This next section pertains to repeat identification:</p>
+<p>Step 7: Run WQ-MAKER</p>
+<p>Before running MAKER, check to make sure all worker instances have become active.</p>
+<p>On the MASTER instance, make sure you are in the “maker_run” directory and all of your files are in place and then run:</p>
+<p>7.1 -contigs-per-split 1: splits the genome file into 1 contig/scaffold/sequence per file. By specifiying this option, we are telling wq_maker to split the genome file into 1 sequence per file. By default, the wq_maker splits the fasta file into 10 sequences per file and this case, it is not ideal because, there will be 2 files (1 containing chromosomes from 1-10 and the other containing 11-12). This will decrease the speed at the wq_maker annotates the genome.</p>
+<p><strong>Warning</strong>: Unless otherwise you have a complete genome containing chromosomes or very few scaffolds, it is not recommended to use this option. For example if you have a genome that contains 10,000 sequences, then this option will create 10,000 files on your working directory which is not ideal of navigation purposes. Check to see how many contigs/scaffolds/chromosomes you have in your genome using <cite>grep “&gt;” -c &lt;genome fasta file&gt;</cite> and if the number is too high, then avoid this option</p>
+<p>7.2 N maker_run_ud sets the project name to wq_test_{USER}. This is mandatory if we need to run WQ-MAKER.</p>
+<p>7.3 -d all Sets the debug flag for Work Queue. For all debugging output, try ‘all’
+7.4 -o master.dbg Sets the debug file for Work Queue
+7.5 -debug_size_limit=0 Sets the byte wrap around on the debug file. 0 signifies it is never wrapped (Default it 1M)</p>
+<p>Wait for the MASTER to advertise master status to the catalog server before your run WQ-MAKER on the WORKERS (see below).</p>
+<p><strong>INFO</strong>
+$ tail log_file.txt</p>
+<p>Mon Sep 11 15:08:22 2017 :: Submitting file ./test_data/test_genome.fasta_000008 for processing.
+Mon Sep 11 15:08:22 2017 :: Submitted task 11 for annotating ./test_data/test_genome.fasta_000008 with command: mpiexec -n 1 maker -g ./test_data/test_genome.fasta_000008 -base test_genome -debug_size_limit=0
+Mon Sep 11 15:08:22 2017 :: Submitting file ./test_data/test_genome.fasta_000006 for processing.
+Mon Sep 11 15:08:22 2017 :: Submitted task 12 for annotating ./test_data/test_genome.fasta_000006 with command: mpiexec -n 1 maker -g ./test_data/test_genome.fasta_000006 -base test_genome -debug_size_limit=0
+warning: this work queue master is visible to the public.
+warning: you should set a password with the –password option.</p>
+<p>Once the log_file show the above output and once your WORKERS are in active state, then either ssh or use webshell into each of the WORKERS and then run</p>
+<p>7.6 -N wq_test_${USER} sets the project name to maker_run_test. This is mandatory if we need to run WQ-MAKER. This is the same id that we have specified with MASTER</p>
+<p>7.7 –debug-rotate-max=0 Set the maximum size of the debug log (default 10M, 0 disables)</p>
+<p>7.8 -d all Sets the debug flag for Work Queue. For all debugging output, try ‘all’
+7.9 -o worker.dbg Sets the debug file for Work Queue</p>
+<p>7.10 –cores all Uses all the cores on the machine</p>
+</div>
+</div>
+<div class="section" id="note-advanced-users">
+<h1><strong>Note(Advanced Users)</strong><a class="headerlink" href="#note-advanced-users" title="Permalink to this headline">¶</a></h1>
+<p>You can use Anisble method to launch jobs without ssh’ing into WORKERS from the MASTER itself. Once the maker run is started on the master, and once your WORKERS are in active state</p>
+<p>Step 1: Copy ansible.cfg file into your home directory which will help you to avoid host verification</p>
+<p>Step 2: Add ssh keys of MASTER to the JetStream atmosphere. This will allow Ansible to launch the jobs without ssh into the WORKERS.
+Step 3: Copy maker-hosts file into your working directory and populate it with ip addresses of the WORKERS</p>
+<p>Step 4: Copy the Ansible playbook to your working directory.</p>
+<p>Step 5: Run WQ-MAKER on the WORKERS</p>
+<p>To check the status of the WQ-MAKER job, run the following.
+.. code-block:: bash</p>
+<blockquote>
+<div><p>$ work_queue_status -M wq_test_${USER}
+PROJECT            HOST                   PORT WAITING RUNNING COMPLETE WORKERS
+maker_run_test     js-157-131.jetstream-  9155       8       4        0       4</p>
+</div></blockquote>
+<p>Step 8. Stats output from MASTER instance
+The log_file.txt will tell you if the job has been finished or not.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tail log_file.txt
+
+WQ-MAKER Start_time:    <span class="m">1505157588000000</span>
+WQ-MAKER End_time:      <span class="m">1505157849000000</span>
+WQ-MAKER Elapsed:       0d <span class="m">0</span>:04:21.000000
+Work Queue Wall Time:   0d <span class="m">0</span>:04:00.427755
+Cumulative Task Wall Time:      0d <span class="m">0</span>:36:25.377304
+Cumulative Task Good Execute Time:      0d <span class="m">0</span>:36:25.377304
+Work Queue Send Time:   0d <span class="m">0</span>:00:01.437632
+Work Queue Receive Time:        0d <span class="m">0</span>:00:03.863163
+-----------------------------------------------------------------
+Mon Sep <span class="m">11</span> <span class="m">15</span>:24:09 <span class="m">2017</span> :: MPI used :: Cores <span class="m">1</span> :: Memory <span class="m">1024</span> :: Disk <span class="m">2048</span>
+-----------------------------------------------------------------
+</pre></div>
+</div>
+<p>The following are the output files from WQ-MAKER</p>
+<p>8.1 The maker_opts.log, maker_exe.log, and maker_bopts.log files are logs of the control files used for this run of MAKER.
+8.2 The mpi_blastdb directory contains FASTA indexes and BLAST database files created from the input EST, protein, and repeat databases.
+8.3 test_genome_master_datastore_index.log contains information on both the run status of individual contigs and information on where individual contig data is stored.
+8.4 The test_genome_datastore directory contains a set of subfolders, each containing the final MAKER output for individual contigs from the genomic fasta file.</p>
+<p>Check the test_genome_master_datastore_index.log and task_outputs.txt to see if there were any failures:</p>
+<p>All completed.  Other possible status entries include:</p>
+<ul class="simple">
+<li><p>FAILED - indicates a failed run on this contig, MAKER will retry these</p></li>
+<li><p>RETRY - indicates that MAKER is retrying a contig that failed</p></li>
+<li><p>SKIPPED_SMALL - indicates the contig was too short to annotate (minimum contig length is specified in maker_opt.ctl)</p></li>
+<li><p>DIED_SKIPPED_PERMANENT - indicates a failed contig that MAKER will not attempt to retry (number of times to retry a contig is specified in maker_opt.ctl)</p></li>
+</ul>
+<p>The actual output data is stored in in nested set of directories under* test_genome_datastore* in a nested directory structure.</p>
+<p>A typical set of outputs for a contig looks like this:</p>
+<ul class="simple">
+<li><p>The Chr6.gff file is in GFF3 format and contains the maker gene models and underlying evidence such as repeat regions, alignment data, and ab initio gene predictions, as well as fasta sequence.  Having all of these data in one file is important to enable visualization of the called gene models and underlying evidence, especially using tools like Apollo which enable manual editing and curation of gene models.</p></li>
+<li><p>The fasta files Chr6.maker.proteins.fasta and Chr6.maker.transcripts.fasta contain the protein and transcript sequences for the final MAKER gene calls.</p></li>
+<li><p>The Chr6.maker.non_overlapping_ab_initio.proteins.fasta and Chr6.maker.non_overlapping_ab_initio.transcripts.fasta files are models that don’t overlap MAKER genes that were rejected for lack of support.</p></li>
+<li><p>The Chr6.maker.snap_masked.proteins.fasta and Chr6.maker.snap_masked.transcript.fasta are the initial SNAP predicted models not further processed by MAKER</p></li>
+</ul>
+<p>The output directory theVoid.Chr1 contains raw output data from all of the pipeline steps.  One useful file found here is the repeat-masked version of the contig, query.masked.fasta.</p>
+<p>Step 9: Merge the gff files
+.. code-block:: bash</p>
+<blockquote>
+<div><p>$ gff3_merge -n -d test_genome.maker.output/test_genome_master_datastore_index.log</p>
+</div></blockquote>
+<p>9.1 -d The location of the MAKER datastore index log file.
+9.2 -n Do not print fasta sequence in footer</p>
+<blockquote>
+<div><p>By default, the output of the gff3_merge is test_genome.all.gff, but you can have an alternate base name for the output files using “-o” option</p>
+<p>If you want to perform abinition gene predictions then you should skip <cite>-n</cite> option. Run</p>
+<p>And follow the rest of the steps of abinitio gene predictions in here</p>
+</div></blockquote>
+<p>The final output from gff3_merge is “test_genome.all.gff”
+.. code-block:: bash</p>
+<blockquote>
+<div><p>##gff-version 3
+Chr6    maker   gene    43764   46139   .   -   .   ID=maker-Chr6-snap-gene-0.3;Name=maker-Chr6-snap-gene-0.3
+Chr6    maker   mRNA    43764   46139   .   -   .   ID=maker-Chr6-snap-gene-0.3-mRNA-1;Parent=maker-Chr6-snap-gene-0.3;Name=maker-Chr6-snap-gene-0.3-mRNA-1;_AED=0.12;_eAED=0.50;_QI=64|0|0|1|0|0.33|3|0|76
+Chr6    maker   exon    43764   43846   .   -   .   ID=maker-Chr6-snap-gene-0.3-mRNA-1:exon:2;Parent=maker-Chr6-snap-gene-0.3-mRNA-1
+Chr6    maker   exon    44833   44896   .   -   .   ID=maker-Chr6-snap-gene-0.3-mRNA-1:exon:1;Parent=maker-Chr6-snap-gene-0.3-mRNA-1
+Chr6    maker   exon    45992   46139   .   -   .   ID=maker-Chr6-snap-gene-0.3-mRNA-1:exon:0;Parent=maker-Chr6-snap-gene-0.3-mRNA-1
+Chr6    maker   five_prime_UTR  46076   46139   .   -   .   ID=maker-Chr6-snap-gene-0.3-mRNA-1:five_prime_utr;Parent=maker-Chr6-snap-gene-0.3-mRNA-1
+Chr6    maker   CDS 45992   46075   .   -   0   ID=maker-Chr6-snap-gene-0.3-mRNA-1:cds;Parent=maker-Chr6-snap-gene-0.3-mRNA-1
+Chr6    maker   CDS 44833   44896   .   -   0   ID=maker-Chr6-snap-gene-0.3-mRNA-1:cds;Parent=maker-Chr6-snap-gene-0.3-mRNA-1
+Chr6    maker   CDS 43764   43846   .   -   2   ID=maker-Chr6-snap-gene-0.3-mRNA-1:cds;Parent=maker-Chr6-snap-gene-0.3-mRNA-1</p>
+</div></blockquote>
+</div>
+<div class="section" id="moving-data-from-cyverse-datastore-using-icommands">
+<h1><strong>Moving data from CyVerse Datastore using iCommands</strong><a class="headerlink" href="#moving-data-from-cyverse-datastore-using-icommands" title="Permalink to this headline">¶</a></h1>
+<p>iCommands is a collection of commands for Linux and Mac OS operating systems that are used in the iRODS system to interact with the CyVerse Data Store. Many commands are very similar to Unix utilities. For example, to list files and directories, in Linux you use ls, but in iCommands you use ils.
+While iCommands are great for all transfers and for automating tasks via scripts, they are the best choice for large files (2-100 GB each) and for bulk file transfers (many small files). For a comparison of the different methods of uploading and downloading data items, see Downloading and Uploading Data.
+iCommands can be used by CyVerse account users to download files that have been shared by other users and to upload files to the Data Store, as well as add metadata, change permissions, and more. Commonly used iCommands are listed below. Follow the instructions on Setting Up iCommands for how to download and configure iCommands for your operating system.
+A CyVerse account is not required to download a public data file via iCommands. To see instructions just for public data download with iCommands, see the iCommands section on Downloading Data Files Without a User Account.
+For configuring icommands and the different commands that can be used to move the data in and out of datastore, please refer this link. You may want to watch a CyVerse video about iCommands.</p>
+<p>Step1: Running “tmux” command to run the anlaysis in the background
+.. code-block:: bash</p>
+<blockquote>
+<div><p>$ cd ~
+$ tmux</p>
+</div></blockquote>
+<p>Step2: Copy the example Jupyter notebook onto your home directory
+.. code-block:: bash</p>
+<blockquote>
+<div><p>$ cp /opt/WQ-MAKER_example_data/WQ-MAKER-Jupyter-notebook.ipynb .</p>
+</div></blockquote>
+<p>Step3: Launch jupyter notebook in the background
+.. code-block:: bash</p>
+<blockquote>
+<div><p>$ python /opt/anaconda2/bin/jupyter-notebook –no-browser –ip=0.0.0.0 2&gt;&amp;1 | sed s/0.0.0.0/$(curl -s ipinfo.io/ip)/g
+[I 16:54:10.440 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 16:54:10.650 NotebookApp] Serving notebooks from local directory: /home/upendra
+[I 16:54:10.650 NotebookApp] 0 active kernels
+[I 16:54:10.650 NotebookApp] The Jupyter Notebook is running at: <a class="reference external" href="http://129.114.104.169:8888/?token=483a27cd0387ccd04133570999ba8ce8072cf0f45663289f">http://129.114.104.169:8888/?token=483a27cd0387ccd04133570999ba8ce8072cf0f45663289f</a>
+[I 16:54:10.650 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:54:10.650 NotebookApp]</p>
+<blockquote>
+<div><p>Copy/paste this URL into your browser when you connect for the first time,
+to login with a token:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://129.114.104.169:8888/?token=483a27cd0387ccd04133570999ba8ce8072cf0f45663289f">http://129.114.104.169:8888/?token=483a27cd0387ccd04133570999ba8ce8072cf0f45663289f</a> ## Copy and paste this link in the browser</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Step 4: Now click open “WQ-MAKER-Jupyter-notebook.ipynb” and run the jupyter notebooks.</p>
+<p><img alt="WQ-Maker15" src="_images/WQ-Maker15.png" /></p>
+<p>Here is the example Jupyter notebook that was ran before</p>
+<p><a class="reference external" href="http://nbviewer.jupyter.org/github/upendrak/WQ-MAKER_example_data/blob/master/WQ-MAKER-Jupyter-notebook-demo.ipynb">http://nbviewer.jupyter.org/github/upendrak/WQ-MAKER_example_data/blob/master/WQ-MAKER-Jupyter-notebook-demo.ipynb</a></p>
+<p>If you want to exit out of tmux shell without killing it. Press ctrl + b and d. If you want to kill it. Then press ctrl +c</p>
+<p>Search for an answer:
+<a href="http://learning.cyverse.org" target="blank">CyVerse Learning Center</a> or
+<a href="https://wiki.cyverse.org" target="blank">CyVerse Wiki</a></p>
+<p>Post your question to the user forum:
+<a href="http://ask.iplantcollaborative.org/questions" target="blank">Ask CyVerse</a></p>
+<hr class="docutils" />
+<p><strong>Fix or improve this documentation</strong></p>
+<ul class="simple">
+<li><p>On Github: <a href="FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX" target="blank">Github Repo Link</a></p></li>
+<li><p>Send feedback: <a class="reference external" href="mailto:Tutorials&#37;&#52;&#48;CyVerse&#46;org">Tutorials<span>&#64;</span>CyVerse<span>&#46;</span>org</a></p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
+<a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CyVerse
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

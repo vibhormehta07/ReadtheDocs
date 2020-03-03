@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Taxonomic Name Resolution Service (TNRS Tutorial) &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/cyverse.js"></script>
+        <script src="_static/intercom-script-for-learning.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/cyverse.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> YOUR QUICKSTART NAME HERE as topic_quick_start
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#"><strong>Taxonomic Name Resolution Service (TNRS Tutorial)</strong></a><ul>
+<li><a class="reference internal" href="#goal">Goal</a></li>
+<li><a class="reference internal" href="#rationale-and-background">Rationale and Background</a></li>
+<li><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#test-data">Test Data</a></li>
+<li><a class="reference internal" href="#results">Results</a><ul>
+<li><a class="reference internal" href="#additional-information-help">Additional information, help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">YOUR QUICKSTART NAME HERE as topic_quick_start</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li><strong>Taxonomic Name Resolution Service (TNRS Tutorial)</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse logo" src="_images/cyverse_rgb.png" style="width: 500px; height: 100px;" /></a></p>
+<p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
+<a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
+<div class="section" id="taxonomic-name-resolution-service-tnrs-tutorial">
+<h1><strong>Taxonomic Name Resolution Service (TNRS Tutorial)</strong><a class="headerlink" href="#taxonomic-name-resolution-service-tnrs-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="goal">
+<h2>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h2>
+<p>The goal of this tutorial is to become familiar with the Taxonomic Name Resolution Service (TNRS) to identify, correct and update scientific names of plants. TNRS can process many names at once, saving hours of tedious and error-prone manual name correction.</p>
+<p>The TNRS tutorial will take users through the following steps:</p>
+<ul class="simple">
+<li><p>Compile and submit a list of names</p></li>
+<li><p>Process names</p></li>
+<li><p>Download and examine results</p></li>
+</ul>
+</div>
+<div class="section" id="rationale-and-background">
+<h2>Rationale and Background<a class="headerlink" href="#rationale-and-background" title="Permalink to this headline">¶</a></h2>
+<p>TNRS validates names, corrects spelling errors, indicates alternative spellings, and replaces out-of-date names by using an authoritative database of currently accepted, published scientific names.</p>
+<p>Common problems with taxonomic standardization include:</p>
+<p>Synonymous Names - Many organisms go by multiple names.</p>
+<p>Erroneous Names - Spelling errors in database entries and other issues lead to mismatched results.</p>
+<p>Outdated Names - Taxonomic names can change or be re-grouped. Taxonomists often disagree with regard to which names should be grouped together.</p>
+<p>Large, collaborative databases such as GBIF, SpeciesLink, VegBank, SALVIAS, TraitNet, and GenBank are plagued by taxonomic problems, with up to 30% of names unmatched to any published name. Even among published names, 5% to 20% are synonymous. Taxonomic standardization remains an error-prone and largely manual process. The need for an automated name resolution service has never been greater.</p>
+</div>
+<div class="section" id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<p>Visit this page for a more detailed overview.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>None. However, please register for an iPlant account at user.iplantcollaborative.org to receive information about changes and updates.</p>
+</div>
+<div class="section" id="test-data">
+<h2>Test Data<a class="headerlink" href="#test-data" title="Permalink to this headline">¶</a></h2>
+<p>Sample data can be found on this page. Be sure to be logged into your iPlant account.</p>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>View of results window:
+<img alt="Results" src="_images/Results.png" />
+Workflow
+——–
+Section 1: Submitting a list
+Overview: There are two ways of submitting a list: entering it manually or uploading it.</p>
+<p>Entering a list:</p>
+<blockquote>
+<div><p>1.Go to the TNRS app page.
+2.Click “Enter List” tab.
+3.Up to 5000 names can be entered in the Enter List tab, one name per line regardless of file extension. Names can be typed in manual or copy and pasted from a text editor.
+4.Click Submit List to enter list or Clear to start over. Results will appear in a table below the tabbed input box.</p>
+</div></blockquote>
+<p>Uploading a list:</p>
+<blockquote>
+<div><p>1.Go to the TNRS app page.
+2.Click “Upload and Submit List” tab.
+3.List file MUST be plain text, with one name per line, and must have a .txt filename extension; word processor, or spreadsheet files are NOT supported.
+4.Enter an email address. When the list is processed you will receive an email notification that will include a Submission Key to be used to retrieve your results from the “Retrieve Results” tab.
+5.Click Submit List to enter list or Clear to start over.
+6.Enter your email and Submission Key in the “Retrieve Results” tab. Click Retrieve. Results will appear in a table immediately below.
+7.The time required to process a list depends on the number of names submitted and the number that go through the fuzzy matching step, which is the slowest step. Recent benchmarking using a list of 344,145 names showed a processing rate of 1.23 names/sec (total time of 77:55:02). Future development effort will be devoted to improving the performance time.</p>
+</div></blockquote>
+<p>Section 2: Processing the results
+Overview: Once your list has been processed, a new window should appear below the application screen.</p>
+<blockquote>
+<div><p>1.All names in the “Name Matched” and “Accepted Name” fields are linked to the record in the taxonomic source(s).
+2.The “Details” link displays information about the match score.
+3.If a submitted name matches more than one name, that is indicated in the “Name Matched” field in parentheses, (+X more).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>You may select an alternative match if you follow the “(+X more)” link. A popup list will appear. Select a preferred term and click Apply to choose that match.</p></li>
+<li><p>If the TNRS application found multiple equally good matches and cannot select a single best match or if there were issues with the results that require inspection by the user, a red warning flag will appear next to the result. For details on warning flags see this page.</p></li>
+<li><p>It is recommended that users examine any result with an Overall Score lower than 100% or more than one Name Matched.</p></li>
+</ul>
+</div></blockquote>
+<p>4.The “Taxonomic Status” field tells you whether the matched name is also the accepted name (Accepted) or a synonym of a different accepted name (Synonym). In some cases, there may be insufficient information to determine the status of the name, or the Computed Acceptance algorithm is unable to choose a single best name from among alternative conflicting accepted names (No opinion).
+5.When you have finished examining the results, download them by clicking Download results located at the top left corner of the results window. Downloaded results are in .csv format and can be opened in any spreadsheet.
+6.Results are stored on the iPlant server for only 7 days.
+7.For further elaboration on the results window, go to rs.iplantcollaborative.org/instructions.html#viewing_results .</p>
+</div></blockquote>
+<p>Section 3: Downloading results
+Overview: After clicking Download results, you will have the option to download in a Simple or Detailed format.</p>
+<p>Simple Download</p>
+<p>The Simple Download contains the general information displayed on the results screen.</p>
+<p>Detailed Download</p>
+<p>The Detailed Download contains detailed information of results and specifications of how the names are parsed and matched. It includes the fields found in Simple Download as well as additional fields.</p>
+<div class="section" id="additional-information-help">
+<h3>Additional information, help<a class="headerlink" href="#additional-information-help" title="Permalink to this headline">¶</a></h3>
+<p>Search for an answer:
+<a href="http://learning.cyverse.org" target="blank">CyVerse Learning Center</a> or
+<a href="https://wiki.cyverse.org" target="blank">CyVerse Wiki</a></p>
+<p>Post your question to the user forum:
+<a href="http://ask.iplantcollaborative.org/questions" target="blank">Ask CyVerse</a></p>
+<hr class="docutils" />
+<p><strong>Fix or improve this documentation</strong></p>
+<ul class="simple">
+<li><p>On Github: <a href="FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX" target="blank">Github Repo Link</a></p></li>
+<li><p>Send feedback: <a class="reference external" href="mailto:Tutorials&#37;&#52;&#48;CyVerse&#46;org">Tutorials<span>&#64;</span>CyVerse<span>&#46;</span>org</a></p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
+<a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CyVerse
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
