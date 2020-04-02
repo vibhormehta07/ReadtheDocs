@@ -2,8 +2,11 @@
 
 |CyVerse logo|_
 
+
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
+
+
 
 **MAKER Genome Annotation using cc-tools and Jetstream(WQ-MAKER)**
 ==================================================================
@@ -28,6 +31,7 @@ Considerations
 3. Your data (or you can run example data)
 
 **What kind of data do I need?**
+--------------------------------
 
 1. Mandatory Requirements
 
@@ -49,7 +53,7 @@ Considerations
    2.2.2 protein gff (aligned protein homology evidence from an external GFF3 file)
 
 **What kind of resources will I need for my project?**
-
+------------------------------------------------------
 1. Enough storage space on the WQ-MAKER Jetstream instance for both input and output files
  1.1 Creating and mounting an external volume to the running WQ-MAKER MASTER instance would be recommended
 
