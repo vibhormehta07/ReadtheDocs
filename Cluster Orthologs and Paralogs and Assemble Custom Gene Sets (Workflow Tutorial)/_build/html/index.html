@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How to Integrate a Tool in DE &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 1.0 documentation</title>
+  <title>Cluster Orthologs and Paralogs and Assemble Custom Gene Sets(Workflow Tutorial) &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 2.0 documentation</title>
   
 
   
@@ -20,22 +20,15 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'1.0',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/cyverse.js"></script>
-        <script type="text/javascript" src="_static/intercom-script-for-learning.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/cyverse.js"></script>
+        <script src="_static/detail-expand.js"></script>
+        <script src="_static/question-answer.js"></script>
+        <script src="_static/intercom-script-for-learning.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -45,6 +38,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/cyverse.css" type="text/css" />
+  <link rel="stylesheet" href="_static/detail-expand.css" type="text/css" />
+  <link rel="stylesheet" href="_static/question-answer.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -70,7 +65,7 @@
             
             
               <div class="version">
-                1.0
+                2.0
               </div>
             
           
@@ -96,15 +91,13 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#"><strong>How to Integrate a Tool in DE</strong></a><ul>
+<li><a class="reference internal" href="#"><strong>Cluster Orthologs and Paralogs and Assemble Custom Gene Sets(Workflow Tutorial)</strong></a><ul>
 <li><a class="reference internal" href="#goal">Goal</a></li>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
-<li><a class="reference internal" href="#downloads-access-and-services">Downloads, access, and services</a></li>
-<li><a class="reference internal" href="#platform-s">Platform(s)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#steps-to-follow"><em>Steps to Follow</em></a><ul>
-<li><a class="reference internal" href="#summary"><em>Summary</em></a></li>
+<li><a class="reference internal" href="#quick-start-maintainer-s">Quick Start Maintainer(s)</a></li>
+<li><a class="reference internal" href="#conceptual-overview">Conceptual Overview</a></li>
+<li><a class="reference internal" href="#related-tutorials">Related Tutorials</a></li>
+<li><a class="reference internal" href="#workflow-overview">Workflow Overview</a></li>
+<li><a class="reference internal" href="#more-information"><em>More information</em></a><ul>
 <li><a class="reference internal" href="#additional-information-help">Additional information, help</a></li>
 </ul>
 </li>
@@ -155,7 +148,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li><strong>How to Integrate a Tool in DE</strong></li>
+      <li><strong>Cluster Orthologs and Paralogs and Assemble Custom Gene Sets(Workflow Tutorial)</strong></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,192 +167,341 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse logo" src="_images/cyverse_rgb.png" style="width: 500px; height: 100px;" /></a></p>
+  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse_logo" src="_images/cyverse_learning.png" style="width: 500px;" /></a></p>
 <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
 <a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
-<div class="section" id="how-to-integrate-a-tool-in-de">
-<h1><strong>How to Integrate a Tool in DE</strong><a class="headerlink" href="#how-to-integrate-a-tool-in-de" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cluster-orthologs-and-paralogs-and-assemble-custom-gene-sets-workflow-tutorial">
+<h1><strong>Cluster Orthologs and Paralogs and Assemble Custom Gene Sets(Workflow Tutorial)</strong><a class="headerlink" href="#cluster-orthologs-and-paralogs-and-assemble-custom-gene-sets-workflow-tutorial" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="goal">
 <h2>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial will help you understand the process and how a tool can be integrated in the
-Discovery Environment using Github and Docker.</p>
+<p>Input entire protein-encoding gene or transcript repertoires from genomes of interest, and cluster homologs (orthologs and paralogs). Then, query clusters to assemble gene sets based on presence/absence and copy number.</p>
 </div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="downloads-access-and-services">
-<h3>Downloads, access, and services<a class="headerlink" href="#downloads-access-and-services" title="Permalink to this headline">¶</a></h3>
-<p><em>In order to complete this tutorial you will need access to the following services/software</em></p>
-<blockquote>
-<div><table border="1" class="docutils">
+<div class="section" id="quick-start-maintainer-s">
+<h2>Quick Start Maintainer(s)<a class="headerlink" href="#quick-start-maintainer-s" title="Permalink to this headline">¶</a></h2>
+<p>Who to contact if this quick start needs fixing. You can also email
+<a class="reference external" href="mailto:learning&#37;&#52;&#48;CyVerse&#46;org">learning<span>&#64;</span>CyVerse<span>&#46;</span>org</a></p>
+<table class="docutils align-default">
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Prerequisite</th>
-<th class="head">Preparation/Notes</th>
-<th class="head">Link/Download</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Maintainer</p></th>
+<th class="head"><p>Institution</p></th>
+<th class="head"><p>Contact</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>CyVerse account</td>
-<td>You will need a CyVerse account to complete this exercise</td>
-<td><a href="https://user.cyverse.org/" target="_blank">CyVerse User Portal</a></td>
-</tr>
-<tr class="row-odd"><td>Docker account</td>
-<td>You need your docker account to add the tool to your docker account</td>
-<td><a class="reference external" href="https://id.docker.com/login//">Docker login Portal</a></td>
+<tbody>
+<tr class="row-even"><td><p>Vibhor Mehta</p></td>
+<td><p>CyVerse / UA</p></td>
+<td><p><a class="reference external" href="mailto:vibhormehta&#37;&#52;&#48;email&#46;arizona&#46;edu">vibhormehta<span>&#64;</span>email<span>&#46;</span>arizona<span>&#46;</span>edu</a></p></td>
 </tr>
 </tbody>
 </table>
-</div></blockquote>
-</div>
-<div class="section" id="platform-s">
-<h3>Platform(s)<a class="headerlink" href="#platform-s" title="Permalink to this headline">¶</a></h3>
-<p><em>We will use the following CyVerse platform(s):</em></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Platform</th>
-<th class="head">Interface</th>
-<th class="head">Link</th>
-<th class="head">Platform Documentation</th>
-<th class="head">Quick Start</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Discovery Environment</td>
-<td>Web/Point-and-click</td>
-<td><a href="https://de.cyverse.org/de/" target="blank">Discovery Environment</a></td>
-<td><a href="https://wiki.cyverse.org/wiki/display/DEmanual/Table+of+Contents" target="blank">DE Manual</a></td>
-<td><a href="http://learning.cyverse.org/projects/cyverse-discovery-environment-guide/" target="blank">Discovery Environment Guide</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="steps-to-follow">
-<h2><em>Steps to Follow</em><a class="headerlink" href="#steps-to-follow" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Create a docker container that contains your tool</li>
-</ol>
-<blockquote>
-<div><p>1.1 You can create docker container by first downloading docker on your machine</p>
-<p>1.2 To check if docker is installed type docker help in command line or terminal</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">help</span>
-</pre></div>
-</div>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li>Once docker displays all the commands it means that it is working</li>
-</ol>
-<blockquote>
-<div><p>2.1 Now create a folder in your machine and then create the “Dockerfile”</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir Rstudio-docker <span class="o">&amp;&amp;</span> <span class="nb">cd</span> Rstudio-docker
-nano Dockerfile
-</pre></div>
-</div>
-<p>2.2 Dockerfile is the basic text file that will be the base of your docker image. So here is an example of Rstudio “Dockerfile”</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>FROM rocker/rstudio:3.5.2
-
-RUN apt-get update <span class="se">\</span>
-<span class="o">&amp;&amp;</span> apt-get install -y lsb wget apt-transport-https python2.7 python-requests curl supervisor nginx gnupg2
-
-RUN wget -qO - https://packages.irods.org/irods-signing-key.asc <span class="p">|</span> apt-key add - <span class="se">\</span>
-<span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;deb [arch=amd64] https://packages.irods.org/apt/ xenial main&quot;</span> &gt; /etc/apt/sources.list.d/renci-irods.list <span class="se">\</span>
-<span class="o">&amp;&amp;</span> apt-get update <span class="se">\</span>
-<span class="o">&amp;&amp;</span> apt-get install -y irods-icommands
-
-ADD https://github.com/hairyhenderson/gomplate/releases/download/v2.5.0/gomplate_linux-amd64 /usr/bin/gomplate
-RUN chmod a+x /usr/bin/gomplate
-
-COPY run.sh /usr/local/bin/run.sh
-COPY nginx.conf.tmpl /nginx.conf.tmpl
-COPY rserver.conf /etc/rstudio/rserver.conf
-COPY supervisor-nginx.conf /etc/supervisor/conf.d/nginx.conf
-COPY supervisor-rstudio.conf /etc/supervisor/conf.d/rstudio.conf
-
-ENV REDIRECT_URL <span class="s2">&quot;http://localhost&quot;</span>
-ENV PASSWORD <span class="s2">&quot;rstudio1&quot;</span>
-
-RUN bash /etc/cont-init.d/userconf
-
-ENTRYPOINT <span class="o">[</span><span class="s2">&quot;/usr/local/bin/run.sh&quot;</span><span class="o">]</span>
-</pre></div>
-</div>
-<p>2.3 Once you create the “Dockerfile”, you need to build the container</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -t rstudio .
-</pre></div>
-</div>
-<p>2.4 Test the docker image by typing the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run rstudio
-</pre></div>
-</div>
-<p>2.5 Now tag the image with your dockerhub-username followed by the image name.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker tag rstudio username/rstudio
-</pre></div>
-</div>
-<p>2.6 Now login and then push the container to DockerHub where it can be accessed by others</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker login -u username
-docker push username/rstudio
-</pre></div>
-</div>
-</div></blockquote>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li>Login to the <a class="reference external" href="https://de.cyverse.org/de/">discovery_environment</a></li>
-</ol>
-<blockquote>
-<div>3.1 Go to Apps on the left hand corner</div></blockquote>
-<p><img alt="De app" src="./img/apps.png" /></p>
-<blockquote>
-<div><p>3.2 Click on manage tools in the top ride side of the window</p>
-<p>3.3 Click on Tools –&gt; Add tool</p>
-<p>3.4 Enter name you want to give your tool and fill the form with the required fields</p>
-</div></blockquote>
-<p><img alt="De create tool" src="_images/imgrstudio.png" /></p>
-<p>3.5 Below are specific ports for vice tools in DE which need to be entered as ENTRYPOINTS based on the tool you are creating.</p>
-<blockquote>
-<div><table border="1" class="docutils">
-<colgroup>
-<col width="57%" />
-<col width="43%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Type</td>
-<td>Port</td>
-</tr>
-<tr class="row-even"><td>Jupyter</td>
-<td>8888</td>
-</tr>
-<tr class="row-odd"><td>Rstudio</td>
-<td>80</td>
-</tr>
-<tr class="row-even"><td>Shiny</td>
-<td>3838</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<div class="section" id="summary">
-<h3><em>Summary</em><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
-<p><strong>Next Steps:</strong></p>
-<p>The above tutorial can be repeated to add tools of your choice by just replacing certain
-like container name, login id , tool name.
-Some common next steps include:</p>
-<ol class="arabic simple">
-<li>Always have a Dockerfile before trying to build your container</li>
-</ol>
 </div>
 <hr class="docutils" />
+<div class="section" id="conceptual-overview">
+<h2>Conceptual Overview<a class="headerlink" href="#conceptual-overview" title="Permalink to this headline">¶</a></h2>
+<p>Please put image here.</p>
+</div>
+<div class="section" id="related-tutorials">
+<h2>Related Tutorials<a class="headerlink" href="#related-tutorials" title="Permalink to this headline">¶</a></h2>
+<p>A draft tutorial is below, as a ‘Workflow Overview’.</p>
+</div>
+<div class="section" id="workflow-overview">
+<h2>Workflow Overview<a class="headerlink" href="#workflow-overview" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><em>Step 1: Translation of CDS from Transcript Data: Transcript Decoder 1.0</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Optional step if your data contains a species for which amino acid sequences are not available.  If, instead, you have transcripts that you would like to search for CDS and include their amino acid sequences, Transdecoder can help.  Transdecoder searches for CDS in transcript data and produces nucleotide and amino acid fasta files (among several other outputs) of detected CDS.</p></li>
+</ul>
+<ol class="loweralpha simple">
+<li><p>Input</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Individual fasta files of transcript data for each species’ genome
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 0_Transcript_Decoder_1.0_input.</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Output</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>Amino acid fasta file of detected CDS
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering-&gt; 1_Transcript_Decoder_1.0_output</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘best_candidates.eclipsed_orfs_removed.pep’ was selected from the example output, renamed and used in step 2 below.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Caveats
+- Examine Transdecoder documentation to select the appropriate output file for your experiment.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Step 2: Rename Sequences and Prepare Input Files: fastaRename</em></p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Input</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fasta files of amino acid sequences. One fasta file per species. Each file should represent, as nearly as possible, a complete protein-encoding gene repertoire.</p></li>
+<li><p>User-defined 2-letter abbreviations for each input species genome.</p></li>
+<li><p>Test input files are from 4 species: Plasmodium falciparum, Toxoplasma gondii, Neospora caninum, and Theileria annulata. Each file represents a ‘complete’ protein-encoding gene repertoire for that species. N. caninum sequences were produced from transcript data in step 1. For the interested, these are Apicomplexan species, chosen for their relatively small gene repertoires. Data are for testing purposes. The latest data for each species can be found at EuPathDB.
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 2_fastaRename_input</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Output (for each species)</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fasta file of renamed amino acid sequences</p></li>
+<li><p>GG file for use by OrthoMCL below</p></li>
+<li><p>Mapping file
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 3_fastaRename_output</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Caveats
+- The sequences used as input can greatly affect downstream clustering output. Largely incomplete protein-encoding gene repertoires, or the inclusion of distantly related species, must be considered when interpreting output.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Step 3: All-by-All BLASTp and Parse</em></p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>This stage consists of 4 ‘sub steps’. Selected output from each of these serves as input for the next.</p></li>
+</ul>
+<ol class="loweralpha simple">
+<li><p>Concatenate Multiple Files</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Separately for each file type, concatenate fasta, gg, and map files produced in the last step
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 4_Concatenate_Multiple_Files_output</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Create BLAST Database</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Create BLASTp database from concatenated fasta file in last step
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 5_Create_BLAST_Database_output</p></li>
+<li><p>‘condor-stdout-0’ in example output is selected from app log files and shows the number of sequences formatted as part of the BLASTp database</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="3">
+<li><p>All-By-All BLASTp of combined fasta file</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Select Combined fasta file as query, and folder with BLASTp database as subject</p></li>
+<li><p>Under ‘Options’ for this App, choose ‘pairwise’ for Output Format  Format.  This will provide the appropriate output for parsing in the next step.</p></li>
+<li><p>‘Under ‘Options for this App, in the boxes ‘Option 1:’ and ‘Option 2:’ add the flags ‘-num_descriptions 250’ and ‘-num_alignments 250’ respectively.  This will limit the reported matches for each query to 250 and ensure that the number of one-line descriptors matches the number of alignments in the BLASTp output.  If you feel you need more than 250 matches for each query, you may increase the number, but the numbers for the two flags must be equal or the BLAST parser will fail in the next  step.
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 6_Blastp_output</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="4">
+<li><p>parseBlastBpo to parse BLASTp output to produce OrthoMCL BPO file.</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 7_parseBlastBpo_output -&gt; parsedBLASToutput_bpo.txt</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Caveats
+- BLASTp parameters will affect clustering output
+- Once you are satisfied that your BLASTp output has been successfully parsed, you have the option to be a good data manager and delete the potentially large BLASTp output file.  You can always recreate it later if you need it again.  Take care not to accidentally delete the parsed BPO file, you need that for the next step.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="4">
+<li><p><em>Step 4: Cluster Homologs (orthologs and paralogs), optionally add unclustered sequences to OrthoMCL output, generate reports on the number of clusters in and between species.</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This stage consists of 3 ‘sub steps’.  Input and output of each step are explained below.</p></li>
+</ul>
+<ol class="loweralpha simple">
+<li><p>Cluster homologs with OrthoMCL v1.4</p></li>
+</ol>
+<blockquote>
+<div><blockquote>
+<div><ul>
+<li><p>Inputs
+- Concatenated GG file from step 3</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 4_Concatenate_Multiple_Files_output -&gt; GG_Combined.txt</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>BPO file from step 3
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 7_parseBlastBpo_output -&gt; parsedBLASToutput_bpo.txt</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Outputs</dt><dd><ul>
+<li><p>Example:  Community Data -&gt; iplantcollaborative -&gt; example_data -&gt;  homolog_clustering -&gt; 8_OrthoMCL_output</p></li>
+<li><p>See OrthoMCL v1.4 documentation for a description of the output files</p></li>
+<li><p>Note that if all you need are OrthoMCL-generated homolog clusters, you can stop here.  The example file ‘all_orthomcl.out’ contains the final output of the OrthoMCL program.  The remaining steps provide analysis and parsing of OrthoMCL output.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Add unclustered sequences with appendUnclustered - OPTIONAL but recommended</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OrthoMCL does not include unclustered sequences in its output. For each species, some sequences will remain unclustered. If you intend to study sequences with no detected homologs you will want to add unclustered sequences to the OrthoMCL output. This step will add each unclustered sequence to the OrthoMCL output, each as a cluster with only one sequence. Remember to account for these manually added clusters later.</p></li>
+<li><p>Inputs
+- Concatenated GG file from step 3</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 4_Concatenate_Multiple_Files_output -&gt; GG_Combined.txt</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>mcl directory from OrthoMCL output
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 8_OrthoMCL_output -&gt; Nov14 -&gt; mcl/</p></li>
+</ul>
+</li>
+<li><p>Outputs
+- Example:  Community Data -&gt; iplantcollaborative -&gt; example_data -&gt;  homolog_clustering -&gt; 9_appendUnclustered_output
+- SeeappendUnclustered documentation for a description of the output files</p></li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p>Generate report and custom output files with clusterReport
+- Input for this step may or may not include unclustered sequences.  SeeclusterReport documentation for a detailed description of input and output files directly related to this workflow.
+a. Inputs</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Concatenated GG file from step 3
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 4_Concatenate_Multiple_Files_output -&gt; GG_Combined.txt</p></li>
+<li><p>mcl directory, either fromOrthoMCL v1.4 (without unclustered added) or fromappendUnclustered (with unclustered added)
+- Example: without unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 8_OrthoMCL_output -&gt; Nov_14
+- Example: with unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 9_appendUnclustered_output</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><ol class="loweralpha simple" start="2">
+<li><p>Outputs</p>
+<ul class="simple">
+<li><p>SeeclusterReport documentation for a description of the output files
+- Example without unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 10_clusterReport_output -&gt; without_unclustered_added
+- Example:with unclustered added:  Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 10_clusterReport_output -&gt; with_unclustered_added</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
+<ul class="simple">
+<li><p>Caveats
+- Remember to verify that the correct species, numbers of sequences, and numbers of clusters are represented in each output step.  The log files are useful for this.
+- A word on unclustered sequences.  If a sequence is not clustered, this means that no homologs have been detected. Note that this may not mean a sequence has no biological homologs, only that none were detected using these programs, species, and parameters.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Step 5: Query Clusters and Assemble Custom Gene Sets with queryOrthoMCL</em></p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Input for this step may or may not include unclustered sequences.  SeequeryOrthoMCL documentation for a detailed description of input and output files directly related to this workflow.</p></li>
+</ul>
+<ol class="loweralpha simple">
+<li><p>Inputs</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Concatenated GG file generated in step 3
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 4_Concatenate_Multiple_Files_output -&gt; GG_Combined.txt</p></li>
+<li><p>orthomcl.index file from OrthoMCL v1.4 (without unclustered added) or from appendUnclustered (with unclustered added)
+- Example: without unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 8_OrthoMCL_output -&gt; Nov_14 -&gt; mcl -&gt; orthomcl.index
+- Example: with unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 9_appendUnclustered_output -&gt; orthomcl.index</p></li>
+<li><p>orthomcl.mclout file from OrthoMCL v1.4 (without unclustered added) or from appendUnclustered (with unclustered added)
+- Example: without unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 8_OrthoMCL_output -&gt; Nov_14 -&gt; mcl -&gt; orthomcl.mclout
+- Example: with unclustered added: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 9_appendUnclustered_output -&gt; orthomcl.mclout</p></li>
+<li><p>minMax.txt file created by User (see queryOrthoMCL documentation for an example)
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 11_queryOrthoMCL_input -&gt; minMax.txt</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Outputs</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Query.group file with clusters that meet search criteria
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt; 12_queryOrthoMCL_output -&gt; Query.group</p></li>
+<li><p>queryOrthoMCL.log file analysis summary
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt;  _2_queryOrthoMCL_output -&gt; <a href="#id1"><span class="problematic" id="id2">0_queryOrthoMCL.log_</span></a></p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Caveats
+- Be careful to keep track of whether or not you are including unclustered results.
+- Some testing of the minMax.txt input file will help you understand the search criteria.  Note that for both the min and max values, only clusters that exactly meet these criteria will be returned.  For example, if you search for min=1 and max=3, only clusters with between 1 and 3 genes for that species will be returned.  If you search for min=0 max =999999, clusters with any number of genes for that species will be returned (assuming that the species has less than 999999 genes).</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p><em>Step 6: Map Fasta Headers to clusterReport and/or queryOrthoMCL output with flattenClusters</em></p></li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Input</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>.group file from either queryOrthoMCL or clusterReport
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt;  12_queryOrthoMCL_output -&gt; Query.group</p></li>
+<li><p>Concatenated Map file generated in step 3
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt;  4_Concatenate_Multiple_Files_output -&gt; Map_Combined.txt</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Output</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>flattened.txt file with one gene per line
+- Example: Community Data -&gt; iplantcollaborative -&gt; example_data -&gt; homolog_clustering -&gt;  13_flattenClusters_output -&gt; flattened.txt</p></li>
+<li><p>See flattenClusters documentation for a description of the output file format.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Caveats
+- Inputs must come from either clusterReportorqueryOrthoMCLand notOrthoMCL v1.4</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="more-information">
+<h2><em>More information</em><a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h2>
+<p><em>Additional applications in DE</em>
+- fastaRename
+- parseBlastBpo
+- OrthoMCL v1.4
+- appendUnclustered
+- clusterReport
+- queryOrthoMCL
+- flattenClusters</p>
 <div class="section" id="additional-information-help">
 <h3>Additional information, help<a class="headerlink" href="#additional-information-help" title="Permalink to this headline">¶</a></h3>
 <p>Search for an answer:
@@ -370,8 +512,8 @@ Some common next steps include:</p>
 <hr class="docutils" />
 <p><strong>Fix or improve this documentation</strong></p>
 <ul class="simple">
-<li>On Github: <a href="FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX" target="blank">Github Repo Link</a></li>
-<li>Send feedback: <a class="reference external" href="mailto:Tutorials&#37;&#52;&#48;CyVerse&#46;org">Tutorials<span>&#64;</span>CyVerse<span>&#46;</span>org</a></li>
+<li><p>On Github: <a href="FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX_FIX" target="blank">Github Repo Link</a></p></li>
+<li><p>Send feedback: <a class="reference external" href="mailto:Tutorials&#37;&#52;&#48;CyVerse&#46;org">Tutorials<span>&#64;</span>CyVerse<span>&#46;</span>org</a></p></li>
 </ul>
 <hr class="docutils" />
 <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
@@ -391,7 +533,7 @@ Some common next steps include:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CyVerse
+        &copy; Copyright 2020, CyVerse
 
     </p>
   </div>

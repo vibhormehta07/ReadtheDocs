@@ -1,6 +1,7 @@
 .. include:: cyverse_rst_defined_substitutions.txt
+.. include:: custom_urls.txt
 
-|CyVerse logo|_
+|CyVerse_logo|_
 
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
@@ -12,6 +13,25 @@ Goal
 ----
 Input entire protein-encoding gene or transcript repertoires from genomes of interest, and cluster homologs (orthologs and paralogs). Then, query clusters to assemble gene sets based on presence/absence and copy number.
 
+
+Quick Start Maintainer(s)
+----------------------------
+
+Who to contact if this quick start needs fixing. You can also email
+`learning@CyVerse.org <learning@CyVerse.org>`_
+
+.. list-table::
+    :header-rows: 1
+
+    * - Maintainer
+      - Institution
+      - Contact
+    * - Vibhor Mehta
+      - CyVerse / UA
+      - vibhormehta@email.arizona.edu
+
+----
+
 Conceptual Overview
 -------------------
 Please put image here.
@@ -22,7 +42,9 @@ A draft tutorial is below, as a 'Workflow Overview'.
 
 Workflow Overview
 -----------------
+
 1. *Step 1: Translation of CDS from Transcript Data: Transcript Decoder 1.0*
+
       - Optional step if your data contains a species for which amino acid sequences are not available.  If, instead, you have transcripts that you would like to search for CDS and include their amino acid sequences, Transdecoder can help.  Transdecoder searches for CDS in transcript data and produces nucleotide and amino acid fasta files (among several other outputs) of detected CDS.
       a. Input
         - Individual fasta files of transcript data for each species' genome
@@ -35,6 +57,7 @@ Workflow Overview
         - Examine Transdecoder documentation to select the appropriate output file for your experiment.
 
 2. *Step 2: Rename Sequences and Prepare Input Files: fastaRename*
+
     a. Input
       - Fasta files of amino acid sequences. One fasta file per species. Each file should represent, as nearly as possible, a complete protein-encoding gene repertoire.
       - User-defined 2-letter abbreviations for each input species genome.
@@ -69,6 +92,7 @@ Workflow Overview
     - Once you are satisfied that your BLASTp output has been successfully parsed, you have the option to be a good data manager and delete the potentially large BLASTp output file.  You can always recreate it later if you need it again.  Take care not to accidentally delete the parsed BPO file, you need that for the next step.
 
 4. *Step 4: Cluster Homologs (orthologs and paralogs), optionally add unclustered sequences to OrthoMCL output, generate reports on the number of clusters in and between species.*
+
     - This stage consists of 3 'sub steps'.  Input and output of each step are explained below.
     a. Cluster homologs with OrthoMCL v1.4
       - Inputs
@@ -99,6 +123,7 @@ Workflow Overview
           - Example: without unclustered added: Community Data -> iplantcollaborative -> example_data -> homolog_clustering -> 8_OrthoMCL_output -> Nov_14
           - Example: with unclustered added: Community Data -> iplantcollaborative -> example_data -> homolog_clustering -> 9_appendUnclustered_output
      b. Outputs
+
         - SeeclusterReport documentation for a description of the output files
           - Example without unclustered added: Community Data -> iplantcollaborative -> example_data -> homolog_clustering -> 10_clusterReport_output -> without_unclustered_added
           - Example:with unclustered added:  Community Data -> iplantcollaborative -> example_data -> homolog_clustering -> 10_clusterReport_output -> with_unclustered_added
@@ -135,6 +160,7 @@ Workflow Overview
     - Concatenated Map file generated in step 3
       - Example: Community Data -> iplantcollaborative -> example_data -> homolog_clustering ->  4_Concatenate_Multiple_Files_output -> Map_Combined.txt
   b. Output
+
     - flattened.txt file with one gene per line
       - Example: Community Data -> iplantcollaborative -> example_data -> homolog_clustering ->  13_flattenClusters_output -> flattened.txt
     - See flattenClusters documentation for a description of the output file format.

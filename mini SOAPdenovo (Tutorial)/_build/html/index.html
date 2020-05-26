@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mini SOAPdenovo &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 1.0 documentation</title>
+  <title>mini SOAPdenovo &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 2.0 documentation</title>
   
 
   
@@ -26,6 +26,8 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/cyverse.js"></script>
+        <script src="_static/detail-expand.js"></script>
+        <script src="_static/question-answer.js"></script>
         <script src="_static/intercom-script-for-learning.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -36,6 +38,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/cyverse.css" type="text/css" />
+  <link rel="stylesheet" href="_static/detail-expand.css" type="text/css" />
+  <link rel="stylesheet" href="_static/question-answer.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -61,7 +65,7 @@
             
             
               <div class="version">
-                1.0
+                2.0
               </div>
             
           
@@ -88,7 +92,8 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#"><strong>mini SOAPdenovo</strong></a><ul>
-<li><a class="reference internal" href="#goal">Goal</a><ul>
+<li><a class="reference internal" href="#goal">Goal</a></li>
+<li><a class="reference internal" href="#quick-start-maintainer-s">Quick Start Maintainer(s)</a><ul>
 <li><a class="reference internal" href="#methods-and-prerequisites">Methods and Prerequisites</a></li>
 </ul>
 </li>
@@ -164,7 +169,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse logo" src="_images/cyverse_rgb.png" style="width: 500px; height: 100px;" /></a></p>
+  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse_logo" src="_images/cyverse_learning.png" style="width: 500px;" /></a></p>
 <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
 <a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
 <div class="section" id="mini-soapdenovo">
@@ -173,6 +178,31 @@
 <h2>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this exercise is to gain familiarity with a commonly used procedure for de novo whole genome assembly of Illumina reads using the iPlant Discovery Environment (DE). The procedure is based on a publication describing the Assemblathon project, where different methods of assembly were compared.</p>
 <p>This procedure will include assembly of paired and unpaired Illumina reads with Soapdenovo2, followed by analysis of the assembly quality for comparison to what was accomplished in one of the Assemblathon procedures that used Soapdenovo1.Prerequisites</p>
+</div>
+<div class="section" id="quick-start-maintainer-s">
+<h2>Quick Start Maintainer(s)<a class="headerlink" href="#quick-start-maintainer-s" title="Permalink to this headline">¶</a></h2>
+<p>Who to contact if this quick start needs fixing. You can also email
+<a class="reference external" href="mailto:learning&#37;&#52;&#48;CyVerse&#46;org">learning<span>&#64;</span>CyVerse<span>&#46;</span>org</a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Maintainer</p></th>
+<th class="head"><p>Institution</p></th>
+<th class="head"><p>Contact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vibhor Mehta</p></td>
+<td><p>CyVerse / UA</p></td>
+<td><p><a class="reference external" href="mailto:vibhormehta&#37;&#52;&#48;email&#46;arizona&#46;edu">vibhormehta<span>&#64;</span>email<span>&#46;</span>arizona<span>&#46;</span>edu</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
 <div class="section" id="methods-and-prerequisites">
 <h3>Methods and Prerequisites<a class="headerlink" href="#methods-and-prerequisites" title="Permalink to this headline">¶</a></h3>
 <p>The procedure begins with reads previously trimmed with Scythe to remove extraneous sequence, and Sickle to remove low quality reads and low quality portions of the remaining reads. After assembly with the Soapdenovo 2 App in the DE, the resulting assembly will be analyzed for basic quality statistics, and compared to a reference genome for more in depth analysis of the assembly, specifically for assembly fidelity.</p>
@@ -185,8 +215,8 @@
 <h3>Test Data<a class="headerlink" href="#test-data" title="Permalink to this headline">¶</a></h3>
 <p>The original Assemblathon1 data is located in the iPlant Data Store at this location: /iplant/home/shared/iplant_assembly_test_data/assemblathon1. The data to be used in this tutorial is available in the Data Store (Community Data &gt; iplant_training &gt; genome_assembly2 &gt; input_reads).</p>
 <p>This represents the original data from the first assemblathon, trimmed and cleaned up with the applications Scythe and Sickle, as described in a separate tutorial. During the process of trimming, many culled reads left unpaired mates behind, which  were moved into a separate single reads file. All the single read files were combined together and renamed to spA_singles.fq.</p>
-<p>More information on the Assemblathon is available here: <a class="reference external" href="http://assemblathon.org/assemblathon1">http://assemblathon.org/assemblathon1</a>.</p>
-<p>The Assemblathon1 publication, Dent, E. et al., Assemblathon 1: A competitive assessment of de novo short read assembly methods, Genome Res. 2011. 21:2224-2241, is found here: <a class="reference external" href="http://genome.cshlp.org/content/21/12/2224.full?sid=74019122-f944-4ccc-bffe-d16fdd0e7d6c">http://genome.cshlp.org/content/21/12/2224.full?sid=74019122-f944-4ccc-bffe-d16fdd0e7d6c</a>.</p>
+<p>More information on the Assemblathon is available here: <a class="reference external" href="http://assemblathon.org/assemblathon1">Assemblathoninfo</a> .
+The Assemblathon1 publication, Dent, E. et al., Assemblathon 1: A competitive assessment of de novo short read assembly methods, Genome Res. 2011. 21:2224-2241, is found here: <a class="reference external" href="http://genome.cshlp.org/content/21/12/2224.full?sid=74019122-f944-4ccc-bffe-d16fdd0e7d6c">Assemblathoninfo2</a>  .</p>
 </div>
 <div class="section" id="procedures">
 <h3>Procedures<a class="headerlink" href="#procedures" title="Permalink to this headline">¶</a></h3>
@@ -195,7 +225,7 @@
 1. Open a Data window by clicking Data in the Discovery Environment.</p>
 <blockquote>
 <div><p>a. Navigate to the test data(Community Data&gt;iplant_training&gt;genome_assembly2&gt;input_reads). keep this window off to the side so you can drag and drop the test data into the app window.
-Explanation. General information on the reads was provided with the reads on the Assemblathon1 website (<a class="reference external" href="http://korflab.ucdavis.edu/Datasets/Assemblathon/Assemblathon1/README.txt">http://korflab.ucdavis.edu/Datasets/Assemblathon/Assemblathon1/README.txt</a>). Typically for real experiments, this information can be provided by the core facility that performs the sequencing. Paired-end reads are commonly provided as forward/reverse reads, and mate pairs as reverse/forward. The 3000 bp and 10000 bp insert read files are described as mate pair data. The unpaired data is not used for the scaffolding process, which uses the pairing information to link contigs together.)</p>
+Explanation. General information on the reads was provided with the reads on the Assemblathon1 website (<a class="reference external" href="http://korflab.ucdavis.edu/Datasets/Assemblathon/Assemblathon1/README.txt">Assemblathon1</a> ). Typically for real experiments, this information can be provided by the core facility that performs the sequencing. Paired-end reads are commonly provided as forward/reverse reads, and mate pairs as reverse/forward. The 3000 bp and 10000 bp insert read files are described as mate pair data. The unpaired data is not used for the scaffolding process, which uses the pairing information to link contigs together.)</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p>Click on Apps and search for Soapdenovo, select SOAPdenovo 2.0.4.</p></li>
@@ -439,8 +469,9 @@ CTCGGCGCGGATGTCCTTCAGCGGATCGACCCATTGCCACTTCGGCGGCAGCCACTCGCAGGCGAGATAGTCCCGCCGCC
 </li>
 </ol>
 <ol class="arabic">
-<li><dl>
-<dt>Contig fasta file (not assembled in scaffolds):</dt><dd><p>&gt;12629 length 638 cvg_9.1_tip_1</p>
+<li><p>Contig fasta file (not assembled in scaffolds):</p>
+<blockquote>
+<div><p>&gt;12629 length 638 cvg_9.1_tip_1</p>
 <p>GCCGGAGCGGGGCTTATGCCGGGCGCCGCAGTGCCATGACGCAGCGGACCGGGATGTGGAAGTAGCGCCCGATCTGGGCGTCCGTGAGGCCGAGATCGGT
 GAGCGTATCGATCACCCGATCGGGCGAGGGCGCCATCAGCACCTGCGCGCAGAGGCAGGCCATATGGCCGCGGGCGTCCAGTTCATCCTGACCGGGGCAG
 AGGCCGGTCGCCTTCCAGATGCAGCTCGTTTCATCGGGCTCTGCCGAACGGACGGCCTCGTCACGGGTCGATGGGGGCGGAGCGGTCCTGCGGCTGCGGA
@@ -456,8 +487,7 @@ TCGACCGAGATCTTGGATTGCGGCAGGAGGCGCAGGGCCTCGAGCCCGAAGGCGAGCGCCGAGGACCAGCCCTCGGGCGT
 GCATGTCGGCCACCTGAAGCCCGGTGCCGAGGCCGCGCGCGGCATTGGCCAGATCCTCGGTGCCGCCCGCCTCGGGCAGCAGGCCGATCAGCGACACGCC
 GTCGTCGTTGCGCAGCATCTCGACCGAGAAGCGCGGCGCCTCGATCTCGCGCACGGGCGTCACCTCGAGCGCGTCGCGCAGCCGCGTGGCATCGACGGCC
 CCCCCCGCGAGGTTCACCGCGCGGAAGCGCGTGGCCTC</p>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 </ol>
 <table class="docutils align-default">
@@ -534,7 +564,7 @@ CCCCCCGCGAGGTTCACCGCGCGGAAGCGCGTGGCCTC</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CyVerse
+        &copy; Copyright 2020, CyVerse
 
     </p>
   </div>

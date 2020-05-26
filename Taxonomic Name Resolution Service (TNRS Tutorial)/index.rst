@@ -1,9 +1,11 @@
 .. include:: cyverse_rst_defined_substitutions.txt
+.. include:: custom_urls.txt
 
-|CyVerse logo|_
+|CyVerse_logo|_
 
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
+
 
 **Taxonomic Name Resolution Service (TNRS Tutorial)**
 =====================================================
@@ -17,6 +19,23 @@ The TNRS tutorial will take users through the following steps:
 - Compile and submit a list of names
 - Process names
 - Download and examine results
+
+Quick Start Maintainer(s)
+----------------------------
+
+Who to contact if this quick start needs fixing. You can also email
+`learning@CyVerse.org <learning@CyVerse.org>`_
+
+.. list-table::
+    :header-rows: 1
+
+    * - Maintainer
+      - Institution
+      - Contact
+    * - Vibhor Mehta
+      - CyVerse / UA
+      - vibhormehta@email.arizona.edu
+
 
 Rationale and Background
 ------------------------
@@ -44,10 +63,13 @@ Test Data
 ---------
 Sample data can be found on this page. Be sure to be logged into your iPlant account.
 
+
 Results
 -------
 View of results window:
 |Results|
+
+
 Workflow
 --------
 Section 1: Submitting a list

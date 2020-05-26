@@ -1,6 +1,7 @@
 .. include:: cyverse_rst_defined_substitutions.txt
+.. include:: custom_urls.txt
 
-|CyVerse logo|_
+|CyVerse_logo|_
 
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
@@ -14,6 +15,23 @@ The purpose of this exercise is to gain familiarity with a commonly used procedu
 
 This procedure will include assembly of paired and unpaired Illumina reads with Soapdenovo2, followed by analysis of the assembly quality for comparison to what was accomplished in one of the Assemblathon procedures that used Soapdenovo1.Prerequisites
 
+Quick Start Maintainer(s)
+----------------------------
+
+Who to contact if this quick start needs fixing. You can also email
+`learning@CyVerse.org <learning@CyVerse.org>`_
+
+.. list-table::
+    :header-rows: 1
+
+    * - Maintainer
+      - Institution
+      - Contact
+    * - Vibhor Mehta
+      - CyVerse / UA
+      - vibhormehta@email.arizona.edu
+
+----
 
 Methods and Prerequisites
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,9 +47,8 @@ The original Assemblathon1 data is located in the iPlant Data Store at this loca
 
 This represents the original data from the first assemblathon, trimmed and cleaned up with the applications Scythe and Sickle, as described in a separate tutorial. During the process of trimming, many culled reads left unpaired mates behind, which  were moved into a separate single reads file. All the single read files were combined together and renamed to spA_singles.fq.
 
-More information on the Assemblathon is available here: http://assemblathon.org/assemblathon1.
-
-The Assemblathon1 publication, Dent, E. et al., Assemblathon 1: A competitive assessment of de novo short read assembly methods, Genome Res. 2011. 21:2224-2241, is found here: http://genome.cshlp.org/content/21/12/2224.full?sid=74019122-f944-4ccc-bffe-d16fdd0e7d6c.
+More information on the Assemblathon is available here: `Assemblathoninfo <http://assemblathon.org/assemblathon1>`__ .
+The Assemblathon1 publication, Dent, E. et al., Assemblathon 1: A competitive assessment of de novo short read assembly methods, Genome Res. 2011. 21:2224-2241, is found here: `Assemblathoninfo2 <http://genome.cshlp.org/content/21/12/2224.full?sid=74019122-f944-4ccc-bffe-d16fdd0e7d6c>`__  .
 
 Procedures
 ~~~~~~~~~~~
@@ -40,7 +57,7 @@ Part I: Soapdenovo 2
 Time for execution of the tutorial data, approximately 3 hours.
 1. Open a Data window by clicking Data in the Discovery Environment.
   a. Navigate to the test data(Community Data>iplant_training>genome_assembly2>input_reads). keep this window off to the side so you can drag and drop the test data into the app window.
-  Explanation. General information on the reads was provided with the reads on the Assemblathon1 website (http://korflab.ucdavis.edu/Datasets/Assemblathon/Assemblathon1/README.txt). Typically for real experiments, this information can be provided by the core facility that performs the sequencing. Paired-end reads are commonly provided as forward/reverse reads, and mate pairs as reverse/forward. The 3000 bp and 10000 bp insert read files are described as mate pair data. The unpaired data is not used for the scaffolding process, which uses the pairing information to link contigs together.)
+  Explanation. General information on the reads was provided with the reads on the Assemblathon1 website (`Assemblathon1 <http://korflab.ucdavis.edu/Datasets/Assemblathon/Assemblathon1/README.txt>`__ ). Typically for real experiments, this information can be provided by the core facility that performs the sequencing. Paired-end reads are commonly provided as forward/reverse reads, and mate pairs as reverse/forward. The 3000 bp and 10000 bp insert read files are described as mate pair data. The unpaired data is not used for the scaffolding process, which uses the pairing information to link contigs together.)
 2. Click on Apps and search for Soapdenovo, select SOAPdenovo 2.0.4.
   a.If desired, edit the analysis name and description. It is recommended in your analysis name to indicate the kmer size used (e.g., Soapdenovo 2.04_analysis1_kmer47).
 3. For App settings, use the following values for test data:
@@ -236,6 +253,7 @@ b.  Scaffold fasta file after GapCloser:
       CTCGGCGCGGATGTCCTTCAGCGGATCGACCCATTGCCACTTCGGCGGCAGCCACTCGCAGGCGAGATAGTCCCGCCGCCGCC
 
 1. Contig fasta file (not assembled in scaffolds):
+
       >12629 length 638 cvg_9.1_tip_1
 
       GCCGGAGCGGGGCTTATGCCGGGCGCCGCAGTGCCATGACGCAGCGGACCGGGATGTGGAAGTAGCGCCCGATCTGGGCGTCCGTGAGGCCGAGATCGGT
@@ -313,10 +331,6 @@ Post your question to the user forum:
 
 .. |De app| image:: ./img/apps.png
 
-.. |De create tool| image:: ./img/imgrstudio.png
-
-.. |De tool name| image:: ./img/imgrstudio2.png
-
 
 .. Comment: Place URLS Below This Line
 
@@ -337,3 +351,9 @@ Post your question to the user forum:
 .. |Download Cyberduck| raw:: html
 
    <a href="https://cyberduck.io/" target="blank">Download Cyberduck</a>
+
+.. |Assemblathoninfo| raw:: html
+   <a href="http://assemblathon.org/assemblathon1" target="blank">Assemblathoninfo</a>
+
+.. |Assemblathoninfo2| raw:: html
+   <a href="http://genome.cshlp.org/content/21/12/2224.full?sid=74019122-f944-4ccc-bffe-d16fdd0e7d6c." target="blank">Assemblathoninfo2</a>

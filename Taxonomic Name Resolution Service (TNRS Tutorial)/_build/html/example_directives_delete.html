@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>STYLE TIPS - DELETE THIS PAGE BEFORE PUBLISHING &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 1.0 documentation</title>
+  <title>STYLE TIPS - DELETE THIS PAGE BEFORE PUBLISHING &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 2.0 documentation</title>
   
 
   
@@ -26,6 +26,8 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/cyverse.js"></script>
+        <script src="_static/detail-expand.js"></script>
+        <script src="_static/question-answer.js"></script>
         <script src="_static/intercom-script-for-learning.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -36,6 +38,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/cyverse.css" type="text/css" />
+  <link rel="stylesheet" href="_static/detail-expand.css" type="text/css" />
+  <link rel="stylesheet" href="_static/question-answer.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -61,7 +65,7 @@
             
             
               <div class="version">
-                1.0
+                2.0
               </div>
             
           
@@ -91,6 +95,8 @@
 <li><a class="reference internal" href="#many-of-the-examples-writing-your-documentation-using-sample-data">Many of the examples Writing your documentation using sample data</a></li>
 <li><a class="reference internal" href="#other-admonitions">Other admonitions</a></li>
 <li><a class="reference internal" href="#buttons-and-keyboard-combinations">Buttons and keyboard combinations</a></li>
+<li><a class="reference internal" href="#detail-expand-questions">Detail expand questions</a></li>
+<li><a class="reference internal" href="#embed-video">Embed video</a></li>
 <li><a class="reference internal" href="#urls-links">URLs/Links</a></li>
 <li><a class="reference internal" href="#images">Images</a></li>
 </ul>
@@ -159,7 +165,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse logo" src="_images/cyverse_rgb.png" style="width: 500px; height: 100px;" /></a></p>
+  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse_logo" src="_images/cyverse_learning.png" style="width: 500px;" /></a></p>
 <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
 <a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
 <div class="section" id="style-tips-delete-this-page-before-publishing">
@@ -236,8 +242,50 @@ common for our documentation.</p>
 <div><ol class="arabic simple">
 <li><p>Click <span class="guilabel"><span class="accelerator">C</span>ancel</span> to continue</p></li>
 <li><p>Press <span class="guilabel"><span class="accelerator">C</span>ontrol</span> + <span class="guilabel"><span class="accelerator">P</span></span> to print your result</p></li>
+<li><p>Fix the <a class="reference external" href="https://de.cyverse.org/de/target=&quot;_blank&quot;"><img alt="CyVerse_launch" src="_images/Powered-By-CyVerse-blue.png" style="width: 125px; height: 20px;" /></a> link in <cite>custom_url.txt</cite> to use this button
+to launch a quicklaunch link in the DE (the embed HTML the DE generates may
+not render properly in RTD)</p></li>
 </ol>
 </div></blockquote>
+</div>
+<div class="section" id="detail-expand-questions">
+<h2>Detail expand questions<a class="headerlink" href="#detail-expand-questions" title="Permalink to this headline">¶</a></h2>
+<p>You can have questions by using <cite>.. admonition:: Question</cite> and
+<cite>.. admonition:: Answer</cite>. Just make sure you pay attention to spacing as below.</p>
+<blockquote>
+<div><div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<ol class="arabic simple">
+<li><p>Test your reader’s knowledge with a question</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition-answer admonition">
+<p class="admonition-title">Answer</p>
+<p>Give them an answer</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Test your reader’s knowledge with a question</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition-answer admonition">
+<p class="admonition-title">Answer</p>
+<p>Give them an answer</p>
+</div>
+</div></blockquote>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="embed-video">
+<h2>Embed video<a class="headerlink" href="#embed-video" title="Permalink to this headline">¶</a></h2>
+<p>You can embed responsive YouTube videos:</p>
+<blockquote>
+<div><div class="video-container">
+<iframe width="560" height="315" align="center"
+src="https://www.youtube.com/embed/XLBpway_jG8" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div></div></blockquote>
 </div>
 <div class="section" id="urls-links">
 <h2>URLs/Links<a class="headerlink" href="#urls-links" title="Permalink to this headline">¶</a></h2>
@@ -281,7 +329,7 @@ updating.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CyVerse
+        &copy; Copyright 2020, CyVerse
 
     </p>
   </div>

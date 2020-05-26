@@ -1,9 +1,11 @@
 .. include:: cyverse_rst_defined_substitutions.txt
+.. include:: custom_urls.txt
 
-|CyVerse logo|_
+|CyVerse_logo|_
 
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
+
 
 **BLAST a Transcriptome (Workflow Tutorial)**
 ==============================================
@@ -13,6 +15,7 @@
 Author: Uwe Hilgert (hilgert at email.arizona.edu) / iPlant Collaborative, BIO5 Institute, University of Arizona
 
 GOAL:
+-----
 
 The goal of this tutorial is to become familiar with a procedure to reduce the number of transcripts and the level of redundancy in an assembled transcriptome, and to identify coding sequences that can be submitted to BLASTP searches. This is a useful procedure to get an idea of the genes in a transcriptome set, without overwhelming the system by running time- and resource-intense BLASTX searches.
 
@@ -26,7 +29,26 @@ The tutorial will take users through the following operations:
 
 * Another alternative search app (MPISSWIPE) is currently being generated and will be added here as soon as it becomes publicly available.
 
+Quick Start Maintainer(s)
+----------------------------
+
+Who to contact if this quick start needs fixing. You can also email
+`learning@CyVerse.org <learning@CyVerse.org>`_
+
+.. list-table::
+    :header-rows: 1
+
+    * - Maintainer
+      - Institution
+      - Contact
+    * - Vibhor Mehta
+      - CyVerse / UA
+      - vibhormehta@email.arizona.edu
+
+----
+
 **Rationale and Background**
+-----------------------------
 
 BLAST Query Size Transcriptomes assembled from Next-generation sequence data are often unnecessarily bloated by redundant contigs and/or contigs of sub-sufficient length. Reducing these unnecessary sequences can easily reduce the size of a transcriptome dataset to less than 50% of its original size and, thus, significantly reduce the time required for subsequent BLAST searches.
 
@@ -48,6 +70,7 @@ The sample BLAST search database consists of NCBI's RefSeq protein, excluding hu
 
 **Workflow**
 ------------
+
 Operation 1: Eliminate small transcripts (app: Select contigs)
 The Select contigs app utilizes the SOAPdenovo-Trans-1.0 tool, a de-novo transcriptome assembler that is adept to handling alternative splicing and different expression levels among transcripts. (Basic documentation: [http://soap.genomics.org.cn/SOAPdenovo-Trans.html])
 

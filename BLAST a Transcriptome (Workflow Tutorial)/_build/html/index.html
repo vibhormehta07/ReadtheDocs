@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BLAST a Transcriptome (Workflow Tutorial) &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 1.0 documentation</title>
+  <title>BLAST a Transcriptome (Workflow Tutorial) &mdash; YOUR QUICKSTART NAME HERE as topic_quick_start 2.0 documentation</title>
   
 
   
@@ -26,6 +26,8 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/cyverse.js"></script>
+        <script src="_static/detail-expand.js"></script>
+        <script src="_static/question-answer.js"></script>
         <script src="_static/intercom-script-for-learning.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -36,6 +38,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/cyverse.css" type="text/css" />
+  <link rel="stylesheet" href="_static/detail-expand.css" type="text/css" />
+  <link rel="stylesheet" href="_static/question-answer.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -61,7 +65,7 @@
             
             
               <div class="version">
-                1.0
+                2.0
               </div>
             
           
@@ -88,7 +92,10 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#"><strong>BLAST a Transcriptome (Workflow Tutorial)</strong></a><ul>
-<li><a class="reference internal" href="#introduction-and-overview"><strong>Introduction and Overview</strong></a><ul>
+<li><a class="reference internal" href="#introduction-and-overview"><strong>Introduction and Overview</strong></a></li>
+<li><a class="reference internal" href="#goal">GOAL:</a></li>
+<li><a class="reference internal" href="#quick-start-maintainer-s">Quick Start Maintainer(s)</a></li>
+<li><a class="reference internal" href="#rationale-and-background"><strong>Rationale and Background</strong></a><ul>
 <li><a class="reference internal" href="#prerequisite">Prerequisite</a></li>
 <li><a class="reference internal" href="#testdata">TestData</a></li>
 </ul>
@@ -164,7 +171,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse logo" src="_images/cyverse_rgb.png" style="width: 500px; height: 100px;" /></a></p>
+  <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse_logo" src="_images/cyverse_learning.png" style="width: 500px;" /></a></p>
 <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
 <a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
 <div class="section" id="blast-a-transcriptome-workflow-tutorial">
@@ -172,7 +179,9 @@
 <div class="section" id="introduction-and-overview">
 <h2><strong>Introduction and Overview</strong><a class="headerlink" href="#introduction-and-overview" title="Permalink to this headline">¶</a></h2>
 <p>Author: Uwe Hilgert (hilgert at email.arizona.edu) / iPlant Collaborative, BIO5 Institute, University of Arizona</p>
-<p>GOAL:</p>
+</div>
+<div class="section" id="goal">
+<h2>GOAL:<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h2>
 <p>The goal of this tutorial is to become familiar with a procedure to reduce the number of transcripts and the level of redundancy in an assembled transcriptome, and to identify coding sequences that can be submitted to BLASTP searches. This is a useful procedure to get an idea of the genes in a transcriptome set, without overwhelming the system by running time- and resource-intense BLASTX searches.</p>
 <p>The tutorial will take users through the following operations:</p>
 <blockquote>
@@ -187,7 +196,34 @@
 <ul class="simple">
 <li><p>Another alternative search app (MPISSWIPE) is currently being generated and will be added here as soon as it becomes publicly available.</p></li>
 </ul>
-<p><strong>Rationale and Background</strong></p>
+</div>
+<div class="section" id="quick-start-maintainer-s">
+<h2>Quick Start Maintainer(s)<a class="headerlink" href="#quick-start-maintainer-s" title="Permalink to this headline">¶</a></h2>
+<p>Who to contact if this quick start needs fixing. You can also email
+<a class="reference external" href="mailto:learning&#37;&#52;&#48;CyVerse&#46;org">learning<span>&#64;</span>CyVerse<span>&#46;</span>org</a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Maintainer</p></th>
+<th class="head"><p>Institution</p></th>
+<th class="head"><p>Contact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vibhor Mehta</p></td>
+<td><p>CyVerse / UA</p></td>
+<td><p><a class="reference external" href="mailto:vibhormehta&#37;&#52;&#48;email&#46;arizona&#46;edu">vibhormehta<span>&#64;</span>email<span>&#46;</span>arizona<span>&#46;</span>edu</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="rationale-and-background">
+<h2><strong>Rationale and Background</strong><a class="headerlink" href="#rationale-and-background" title="Permalink to this headline">¶</a></h2>
 <p>BLAST Query Size Transcriptomes assembled from Next-generation sequence data are often unnecessarily bloated by redundant contigs and/or contigs of sub-sufficient length. Reducing these unnecessary sequences can easily reduce the size of a transcriptome dataset to less than 50% of its original size and, thus, significantly reduce the time required for subsequent BLAST searches.</p>
 <p>BLASTP versus BLASTX In an attempt to quickly get an idea about the genes represented in an assembled transcriptome, experimenters often use BLASTX to query their nucleotide set against a protein data base. The BLASTX algorithm, however, will translate the sequence in 3 reading frames in the forward direction and in 3 reading frames in the reverse direction to generate the amino acid sequences for the search. In essence, this process increases the size of the query six-fold, including all types of spurious (short) amino acid sequences that will increase the search time significantly. Identifying the coding sequences in an assembled and slimmed down contig set, and using the BLASTP algorithm for a straight protein data search will therefore significantly shorten the search time.</p>
 <p>BLAST Search Space The final time-limiting search parameter is the size of the search space, the smaller the search space the faster the search. While experimenters might hope to find significantly more insights by searching the non-redundant, all-proteins containing “nr” database, they may reconsider that strategy when their results take a month to show. Instead, a little thought ahead of time may lead to an intelligent selection of a database or a handful of databases that may significantly reduce the time for the search. Commonly used databases include Refseq Protein, Refseq Protein minus Human and Mouse, UniprotKB, Uniref100, Invertebrate Proteins, and many others. Alternatively, users can generate and search their own, custom-made databases.</p>
@@ -430,7 +466,7 @@ Delta-BLAST (Domain Enhanced Lookup Time Accelerated BLAST; basic documentation:
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CyVerse
+        &copy; Copyright 2020, CyVerse
 
     </p>
   </div>
