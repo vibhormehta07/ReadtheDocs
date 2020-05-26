@@ -1,8 +1,13 @@
 .. _Part1&2: Part1&2.rst
 .. include:: cyverse_rst_defined_substitutions.txt
+<<<<<<< HEAD
 .. include:: custom_urls.txt
 
 |CyVerse_logo|_
+=======
+.. _Part1&2: Part1&2.rst
+|CyVerse logo|_
+>>>>>>> 3c1a0859bab270335ec1fe78496c2704f46960d1
 
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
@@ -68,7 +73,11 @@ Considerations
 
 3. Enough AUs to run your computation
 
+<<<<<<< HEAD
 
+=======
+Part1&2__
+>>>>>>> 3c1a0859bab270335ec1fe78496c2704f46960d1
 
 **Part 4: Set up a MAKER run using the Jupyter notebook**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
