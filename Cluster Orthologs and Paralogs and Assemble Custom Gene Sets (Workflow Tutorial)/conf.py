@@ -10,9 +10,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from misc.cyverse_sphinx_conf import *  # noqa
 
-project = 'YOUR QUICKSTART NAME HERE as topic_quick_start'
+project = 'Cluster ORthologs adn Paralogs and Assemble Custom Gene Sets(Workflow Tutorial)'
 copyright = '2020, CyVerse'
-author = 'your_name'
+author = 'Vibhor Mehta'
 version = '2.0'
 release = '2.0'
 

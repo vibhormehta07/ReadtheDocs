@@ -63,10 +63,13 @@ Test Data
 ---------
 Sample data can be found on this page. Be sure to be logged into your iPlant account.
 
+
 Results
 -------
 View of results window:
 |Results|
+
+
 Workflow
 --------
 Section 1: Submitting a list
